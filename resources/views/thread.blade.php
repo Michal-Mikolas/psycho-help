@@ -14,7 +14,7 @@
     <div class="chat chat-start">
         <div class="chat-image avatar">
             <div class="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src="https://cdn-icons-png.flaticon.com/512/727/727399.png?w=740&t=st=1686413596~exp=1686414196~hmac=c6f884034d693a5d0261228b39ea1ede5d8e5fe54e3ca12ff817a30a1bcefd9e" />
             </div>
         </div>
         <div class="chat-header">
@@ -27,7 +27,7 @@
     <div class="chat chat-end">
         <div class="chat-image avatar">
             <div class="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src="https://cdn-icons-png.flaticon.com/512/727/727399.png?w=740&t=st=1686413596~exp=1686414196~hmac=c6f884034d693a5d0261228b39ea1ede5d8e5fe54e3ca12ff817a30a1bcefd9e" />
             </div>
         </div>
         <div class="chat-header">
