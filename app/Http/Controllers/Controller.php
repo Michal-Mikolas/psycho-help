@@ -49,4 +49,10 @@ class Controller extends BaseController
 		return $result;
 	}
 
+
+	public function thread()
+	{
+		return view('thread');
+	}
+
 }
