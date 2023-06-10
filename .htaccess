@@ -1,0 +1,10 @@
+<FilesMatch "^((phinx.yml)|(deploy.+ini)|(\.env.*)|(.*\.sqlite))$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine On
+#RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ public/$1 [L]
