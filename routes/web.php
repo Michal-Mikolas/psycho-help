@@ -24,4 +24,7 @@ Route::get('/psycho', function () {
 Route::post('/store/{key?}', [Controller::class, 'store'])
 	->name('store');
 
+Route::post('/admin', [Controller::class, 'admin'])
+	->name('admin');
+
 Route::get('/{key}', [Controller::class, 'thread'])->name('thread');

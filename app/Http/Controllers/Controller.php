@@ -20,18 +20,25 @@ class Controller extends BaseController
 	{
 		$values = $request->post();
 
-		$t = new Thread();
-		$t->password_hash = Hash::make($values['password']);
-		$t->save();
+		# Thread
+		if ($key) {
+			$t = Thread::where('key', $key)->first();
+		} else {
+			$t = new Thread();
+			$t->password_hash = Hash::make($values['password']);
+			$t->save();
 
-		$t->key = $this->generateSecretKey($t->id);
-		$t->save();
+			$t->key = $this->generateSecretKey($t->id);
+			$t->save();
+		}
 
+		# Message
 		$m = new Message();
 		$m->message = $values['message'];
 
 		$t->messages()->save($m);
 
+		# Finish
 		return redirect()->route('thread', $t->key);
 	}
 
@@ -50,9 +57,11 @@ class Controller extends BaseController
 	}
 
 
-	public function thread()
+	public function thread($key)
 	{
-		return view('thread');
+		return view('thread', [
+			'thread' => Thread::where('key', $key)->first(),
+		]);
 	}
 
 }

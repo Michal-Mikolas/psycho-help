@@ -9,4 +9,23 @@
 		margin: revert;
 		padding: revert;
 	}
+
+	p {
+		@apply mb-2;
+	}
+	p:nth-last-child(1) {
+		@apply mb-0;
+	}
+
+	.code-block {
+		@apply border border-gray-200 bg-gray-100 px-2 py-1 rounded-md;
+	}
+	.code-block code {
+		@apply pr-2;
+	}
+	.code-block button {
+		@apply relative;
+		margin-right: -0.5rem;
+		top: -0.25rem;
+	}
 }

@@ -30,6 +30,13 @@
 		@yield('content')
 	</div>
 
+	<footer>
+		<a href="{{route('admin')}}" class="text-xs opacity-50 absolute right-4 bottom-4">
+			<i class="fa-solid fa-lock"></i> Admin
+		</a>
+	</footer>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'></script>
 	@yield('tail')
 </body>
 </html>
